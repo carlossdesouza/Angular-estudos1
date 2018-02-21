@@ -54,7 +54,7 @@
           <label>Endereço Completo</label>
           <div class="fields">
             <div class="four wide field">
-                <input type="text" name="cep" (ngModel)="endereco.cep" (blur) = buscarCep(form,endereco.cep) placeholder="CEP">
+                <input type="text" name="cep" (ngModel)="endereco.cep" (blur) = buscarCep(form) placeholder="CEP">
               </div>
             <div class="ten wide field">
               <input type="text" name="logradouro" placeholder="Informe o nome da rua" (ngModel)="endereco.logradouro">

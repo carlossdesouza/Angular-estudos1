@@ -93,7 +93,8 @@ export class PainelComponent implements OnInit {
     this.apagarMensagem(5000)
   }
 
-  public buscarCep(form:NgForm, cep:string = "08120590"):any{
+  public buscarCep(form:NgForm):any{
+    let cep = form.value.endereco.cep
     this.http.get(`http://api.postmon.com.br/v1/cep/${cep}`)
     .map(dados => dados.json())
     .subscribe(dados => this.popularCepview(form,dados))
