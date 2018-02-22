@@ -24,7 +24,7 @@ export class PainelComponent implements OnInit {
   endereco:Endereco
 
   listaDeUfs:Array<Estados> = Estados.estados()
-  listaPessoas:Array<Pessoa> = [new Pessoa ('Carlos José','Santos de Souza',new Date(),'Masculino',new Endereco('a',12,'a','a','a',Estados.estados()[25].nome,'SP'),new Telefone('a','a'))]
+  listaPessoas:Array<Pessoa> = [new Pessoa ('Carlos José','Santos de Souza',new Date("1988-09-03"),'Masculino',new Endereco('Rua Estevão Ribeiro Garcia',0,'fundos','08120-590','Itaim Paulista',Estados.estados()[25].nome,'SP'),new Telefone('(11) 96564-0000','(11) 2963-0000'))]
   pessoaZoom:Pessoa = Pessoa.popular()
   //variavel responsável pela cor do button CSS e selecao do SUBMIT
   controleCssButton:boolean = true
