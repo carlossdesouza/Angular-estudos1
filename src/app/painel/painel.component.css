@@ -1,3 +1,23 @@
 .red{
   color: red;
 }
+
+.visibility{
+  visibility:hidden;
+}
+
+/* Mobile */
+
+@media only screen and (min-width: 767px) {
+  .mobile-hide{
+    display: none !important;
+  }
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 768px) {
+  .computer-hide{
+    display: none !important;
+  }
+}

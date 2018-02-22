@@ -51,15 +51,17 @@
     </div>
       <div  class="ui segment secondary" ngModelGroup='endereco'>
         <div class="field">
-          <label>Endereço Completo</label>
           <div class="fields">
             <div class="four wide field">
+                <label>Endereço Completo</label>
                 <input type="text" name="cep" (ngModel)="endereco.cep" (blur) = buscarCep(form) placeholder="CEP">
               </div>
             <div class="ten wide field">
+                <label class="visibility">.</label>
               <input type="text" name="logradouro" placeholder="Informe o nome da rua" (ngModel)="endereco.logradouro">
             </div>
             <div class="three wide field">
+                <label class="visibility">.</label>
               <input type="text" name="numero" placeholder="numero" (ngModel)="endereco.numero">
             </div>
           </div>
@@ -91,19 +93,20 @@
     type="submit" >{{valueButton}}
   </button>
 </form>
-<table class="ui selectable inverted table celled teal">
-  <thead>
-    <tr>
-      <th colspan="3">NOME</th>
-      <th>IDADE</th>
-      <th>SEXO</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+<!--Table Computer-->
+  <table class=" ui selectable inverted table celled teal computer-hide">
+    <thead>
+      <tr>
+        <th colspan="3">NOME</th>
+        <th>NASCIMENTO</th>
+        <th>SEXO</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
       <tr *ngFor="let pessoa of listaPessoas , let count = index">
         <td colspan="3">{{pessoa.nome+" "+pessoa.sobrenome}}</td>
-        <td>{{pessoa.idade}}</td>
+        <td>{{pessoa.idade | date: 'dd/MM/yyyy'}}</td>
         <td>{{pessoa.sexo}}</td>
         <td class="center aligned">
           <div class="ui small teal icon buttons">
@@ -115,6 +118,27 @@
       </tr>
     </tbody>
   </table>
+
+
+  <!--Table Mobile-->
+  <table class="ui selectable inverted table celled teal mobile-hide">
+
+    <tbody>
+      <tr *ngFor="let pessoa of listaPessoas , let count = index">
+        <td colspan="3"><b>NOME: </b>{{pessoa.nome+" "+pessoa.sobrenome}}</td>
+        <td><b>DATA DE NASCIMENTO: </b>{{pessoa.idade | date: 'dd/MM/yyyy'}}</td>
+        <td><b>SEXO: </b>{{pessoa.sexo}}</td>
+        <td class="center aligned">
+          <div class="ui small teal icon buttons">
+            <button class="ui button"><i class="zoom icon" (click) = zoom(form,count)></i></button>
+            <button class="ui button"><i class="edit icon" (click) = selecionar(form,count)></i></button>
+            <button class="ui button"><i class="remove icon"(click) = excluir(form,count)></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 <!--<pre>{{exibirDados() | json}}</pre>-->
   <div class="ui mini modal">
       <div class="header">VISUALIZAÇÃO DE DADOS</div>
