@@ -11,7 +11,7 @@ Angular, Semantic UI, NodeJS, NPM, TypeScript, CSS, Java Script, Heroku, CSS, HT
 
 ## Contato
 
-<p>NOME: Carlos J. S. Souza</p>
-<p>E-MAIL: carlossdesouza@gmail.com</p>
-<p>FACEBOOK: [carlossdesouza1988](https://www.facebook.com/carlossdesouza1988)</p>
-<p>LINKEDIN: [arlos-j-s-de-souza-30951418](https://www.linkedin.com/in/carlos-j-s-de-souza-30951418/)</p>
+NOME: Carlos J. S. Souza</br>
+E-MAIL: carlossdesouza@gmail.com</br>
+FACEBOOK: [carlossdesouza1988](https://www.facebook.com/carlossdesouza1988)</br>
+LINKEDIN: [carlos-j-s-de-souza-30951418](https://www.linkedin.com/in/carlos-j-s-de-souza-30951418/)</p>
