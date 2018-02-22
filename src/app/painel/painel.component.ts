@@ -95,7 +95,7 @@ export class PainelComponent implements OnInit {
 
   public buscarCep(form:NgForm):any{
     let cep = form.value.endereco.cep
-    this.http.get(`http://api.postmon.com.br/v1/cep/${cep}`)
+    this.http.get(`https://api.postmon.com.br/v1/cep/${cep}`)
     .map(dados => dados.json())
     .subscribe(dados => this.popularCepview(form,dados))
   }
